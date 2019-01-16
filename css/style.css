@@ -1,3 +1,10 @@
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
 /* Custom default button */
 .btn-default,.btn-default:hover,.btn-default:focus 
 {
@@ -50,11 +57,11 @@ body
  */
 .cover 
 {
-  padding: 0 20px;
+  padding: 0 5px;
 }
 .cover .btn-lg 
 {
-  padding: 10px 20px;
+  padding: 10px 10px;
   font-weight: bold;
 }
 
@@ -64,7 +71,7 @@ body
 .mastfoot 
 {
   color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+  color: #fff
 }
 
 /*
