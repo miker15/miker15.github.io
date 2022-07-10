@@ -3,4 +3,4 @@ Website base for https://michaelrichterswe.com
 
 Built using HTML/CSS/JavaScript and Bootstrap. Hosted on GitHub pages.
 
-![website preview](images/website.png)
+![website preview](images/website.PNG)
