@@ -74,6 +74,14 @@ i
 }
 
 /*
+ * Image scaling
+ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
  * Scaling for different media devices.
  */
 @media (min-width: 768px) 
