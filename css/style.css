@@ -116,6 +116,10 @@ h1 {
   fill: currentColor;
 }
 
+.menu-panel[hidden] {
+  display: none;
+}
+
 .menu-panel {
   position: absolute;
   top: calc(100% + 0.5rem);
