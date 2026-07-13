@@ -1,102 +1,83 @@
-/*
- * Foundation
- */
-html,body 
- {
+:root {
+  --bg-start: #1f2937;
+  --bg-end: #0f172a;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin: 0;
 }
-body 
-{
-  color: #fff;
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(160deg, var(--bg-start), var(--bg-end));
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-/* 
- * Vertical and horizontal centering 
- */
-.wrapper 
-{
-  display: table;
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 100%;   
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-}
-.wrapper-inner 
-{
-  display: table-cell;
-  vertical-align: top;
-}
-.headline-container 
-{
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 32rem;
 }
 
-/*
- * Headline
- */
-.headline 
-{
-  padding: 0 5px;
+.avatar {
+  width: clamp(6rem, 20vw, 9rem);
+  height: clamp(6rem, 20vw, 9rem);
+  margin-bottom: 1.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/*
- * Links
- */
-a,
-a:focus,
-a:hover 
-{
-  color: #fff;
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
 }
 
-/*
- * Icons
- */
-i
-{
-  padding: 0 5px;
+.bio {
+  margin: 0 0 1.75rem;
+  color: var(--muted);
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  line-height: 1.6;
 }
 
-/*
- * Footer
- */
-.footer 
-{
-  color: #999;
-  color: #fff;
+.socials {
+  display: flex;
+  gap: 1.25rem;
 }
 
-/*
- * Scaling for different media devices.
- */
-@media (min-width: 768px) 
-{
-  .footer 
-  {
-    position: fixed;
-    bottom: 0;
-  }
-  .wrapper-inner 
-  {
-    vertical-align: middle;
-  }
-  .footer,.headline-container 
-  {
-    width: 100%;
-  }
+.socials a {
+  display: inline-flex;
+  color: var(--text);
+  transition: color 0.15s ease, transform 0.15s ease;
 }
-@media (min-width: 992px) 
-{
-  .footer,
-  .headline-container 
-  {
-    width: 700px;
-  }
+
+.socials a:hover,
+.socials a:focus-visible {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.socials svg {
+  width: clamp(1.5rem, 4vw, 1.75rem);
+  height: clamp(1.5rem, 4vw, 1.75rem);
+  fill: currentColor;
 }

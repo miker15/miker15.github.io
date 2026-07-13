@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal portfolio/landing page for https://michaelrichterswe.com, hosted via GitHub Pages (custom domain configured in `CNAME`). Plain HTML/CSS/JavaScript using Bootstrap 3.3.7 and Font Awesome 5.6.3, both loaded from CDN — no build tooling, package manager, or test suite.
+Personal portfolio/landing page for https://michaelrichterswe.com, hosted via GitHub Pages (custom domain configured in `CNAME`). Plain HTML/CSS with no frameworks or CDN dependencies — social icons are inlined as SVG rather than pulled from an icon font. No build tooling, package manager, or test suite.
 
 ## Development
 
@@ -12,8 +12,8 @@ There is no build/lint/test process. Edit `index.html` and `css/style.css` direc
 
 ## Structure
 
-- `index.html` — the single page; content, meta/OpenGraph tags, and CDN links for Bootstrap/Font Awesome live here.
-- `css/style.css` — custom styling layered on top of Bootstrap (centering, background, footer positioning).
-- `images/` — background, favicon, profile photo, and README preview image.
+- `index.html` — the single page; content, meta/OpenGraph tags, and inline SVG icons (LinkedIn, GitHub, resume, email) live here.
+- `css/style.css` — all styling: flexbox centering, a dark gradient background, and `clamp()`-based fluid sizing so the layout scales from mobile to large monitors without media-query breakpoints.
+- `images/` — favicon, profile photo, and README preview image.
 - `resume/Resume.pdf` — resume linked from the page.
 - `CNAME` — GitHub Pages custom domain config; do not remove unless intentionally changing the domain.
