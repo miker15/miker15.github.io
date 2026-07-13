@@ -81,3 +81,67 @@ h1 {
   height: clamp(2rem, 5vw, 2.5rem);
   fill: currentColor;
 }
+
+.site-menu {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 10;
+}
+
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--accent);
+}
+
+.menu-toggle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+.menu-panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 11rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1.25rem;
+  background: var(--bg-end);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.menu-panel a {
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+  text-align: left;
+  font-size: 1rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu-panel a:hover,
+.menu-panel a:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
+}
